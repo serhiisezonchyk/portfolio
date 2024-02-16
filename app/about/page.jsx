@@ -130,10 +130,10 @@ const AboutPage = () => {
                 <h2 className='font-bold text-2xl'>Biography 🙋‍♂️</h2>
                 {/* BIOGRAPHY TEXT */}
                 <p className='text-xl'>
-                  Hello! My name is Sergiy, and I'm a passionate full-stack
-                  developer currently pursuing my master's degree in software
-                  engineering. With a bachelor's degree already under my belt,
-                  I've been actively engaged in the tech industry for a year
+                  Hello! My name is Sergiy, and I&apos;m a passionate full-stack
+                  developer currently pursuing my master&apos;s degree in software
+                  engineering. With a bachelor&apos;s degree already under my belt,
+                  I&apos;ve been actively engaged in the tech industry for a year
                   now, primarily working with React and Node.js technologies,
                   while also diving into Next.js. <br />
                   Every day, I dedicate time to honing my skills in English and
@@ -150,8 +150,8 @@ const AboutPage = () => {
                 </p>
                 {/* BIOGRAPHY DETAILS */}
                 <span className='italic'>
-                  If you're seeking a dedicated and driven team member who
-                  values collaboration and continuous learning, I'd love to
+                  If you&apos;re seeking a dedicated and driven team member who
+                  values collaboration and continuous learning, I&apos;d love to
                   connect!
                 </span>
                 {/* BIOGRAPHY SCROLL */}
