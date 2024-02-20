@@ -135,7 +135,11 @@ const Navbar = () => {
                 className='w-full flex'
                 key={link.url}
               >
-                <NavLink link={link} isMobile={true} />
+                <NavLink
+                  link={link}
+                  isMobile={true}
+                  onClick={() => setOpen(false)}
+                />
               </motion.li>
             ))}
           </motion.ul>

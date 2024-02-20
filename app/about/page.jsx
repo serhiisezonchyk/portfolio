@@ -226,7 +226,7 @@ const AboutPage = () => {
                       duration: 0.5,
                       delay: isSkillRefInView ? index * 0.1 : 0,
                     }}
-                    className='rounded p-2 text-sm cursor-pointer bg-black text-white transition-all duration-150 ease-linear hover:bg-white hover:text-black'
+                    className='rounded p-2 text-sm cursor-pointer bg-black text-white transition-all duration-150 ease-linear active:bg-white active:hover:text-black hover:bg-white hover:text-black'
                   >
                     {skill}
                   </motion.li>
