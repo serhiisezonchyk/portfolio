@@ -34,7 +34,7 @@ const ContactPage = () => {
         </div>
 
         {/* FORM CONTAINER */}
-        <div className='text-sm h-[60%] flex flex-col gap-4 md:gap-8 justify-center lg:h-[90%] lg:w-1/2 bg-red-50 rounded-xl md:text-lg p-12 overflow-scroll'>
+        <div className='text-sm h-[60%] flex flex-col gap-4 md:gap-8 justify-center lg:h-[90%] lg:w-1/2 bg-red-50 rounded-xl md:text-lg p-12 overflow-scroll lg:self-center'>
           <div className='flex flex-col justify-center gap-2'>
             <p>📧Write me by email:</p>
             <a

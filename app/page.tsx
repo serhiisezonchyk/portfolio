@@ -1,6 +1,8 @@
 'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { contactLinks } from '../utils/data';
+import Link from 'next/link';
 export default function Home() {
   return (
     <motion.div
@@ -11,19 +13,36 @@ export default function Home() {
     >
       <section className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 overflow-scroll '>
         {/* IMAGE-CONTAINER */}
-        <div className='hidden sm:block sm:h-1/2 lg:h-full lg:w-1/2 sm:relative z-0'>
+        <div className='hidden sm:block sm:h-1/3 md:h-1/2 lg:h-full lg:w-1/2 sm:relative z-0'>
           <Image src='/hero.png' alt='Man' fill className='object-contain' />
         </div>
         {/* TEXT-CONTAINER */}
-        <div className='h-full sm:h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center z-1 '>
-          {/* TITLE  */}
-          <div className='flex flex-col gap-2 text-center relative'>
-            <h1 className='text-4xl md:text-6xl font-bold tracking-[-2px]	'>
-              Serhii Sezonchyk
-            </h1>
-            <h2 className='font-bold text-gray-500 tracking-[1px] md:text-md lg:text-xl'>
-              React.js/Node.js/Next.js Developer
-            </h2>
+        <div className='h-full sm:h-2/3 py-4 md:h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-between '>
+          {/* LINKS CONTAINER */}
+          <div className='flex h-1/3 justify-end flex-col align-center gap-4'>
+            {/* LINKS */}
+            <ul className='flex md:hidden gap-4 w-full justify-center '>
+              {contactLinks.map((link) => (
+                <li key={link.url}>
+                  <Link
+                    className='flex justify-center items-center bg-black p-2 rounded-full transition-all duration-300 ease-in hover:scale-105'
+                    href={link.url}
+                    target='blank'
+                  >
+                    <link.ContactIcon className='text-white' />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            {/* TITLE  */}
+            <div className='flex flex-col gap-2 text-center relative'>
+              <h1 className='text-4xl md:text-5xl font-bold tracking-[-2px]	'>
+                Serhii Sezonchyk
+              </h1>
+              <h2 className='font-bold text-gray-500 tracking-[1px] md:text-md lg:text-xl'>
+                React.js/Node.js/Next.js Developer
+              </h2>
+            </div>
           </div>
 
           {/* DESCRIPTION */}

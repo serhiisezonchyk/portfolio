@@ -1,26 +1,13 @@
 'use client';
-import { GithubIcon, InstagramIcon, LinkedinIcon } from 'lucide-react';
 import Link from 'next/link';
 import NavLink from '@/components/navLink';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { contactLinks } from '../../utils/data';
 const links = [
   { url: '/', title: 'Home' },
   { url: '/about', title: 'About' },
-  // { url: '/portfolio', title: 'Portfolio' },
   { url: '/contact', title: 'Contact' },
-];
-
-const contactLinks = [
-  { url: 'https://github.com/serhiisezonchyk', ContactIcon: GithubIcon },
-  {
-    url: 'https://www.linkedin.com/in/serhiisznch/',
-    ContactIcon: LinkedinIcon,
-  },
-  {
-    url: 'https://www.instagram.com/nxthing______/',
-    ContactIcon: InstagramIcon,
-  },
 ];
 
 const Navbar = () => {
@@ -81,7 +68,7 @@ const Navbar = () => {
       <ul className='hidden md:flex gap-4 w-1/3'>
         {links.map((link) => (
           <li key={link.url}>
-            <NavLink link={link}/>
+            <NavLink link={link} />
           </li>
         ))}
       </ul>
@@ -148,7 +135,7 @@ const Navbar = () => {
                 className='w-full flex'
                 key={link.url}
               >
-                <NavLink link={link} isMobile={true}/>
+                <NavLink link={link} isMobile={true} />
               </motion.li>
             ))}
           </motion.ul>

@@ -105,24 +105,36 @@ const AboutPage = () => {
         className='h-full overflow-scroll lg:flex scroll-smooth'
         ref={containerRef}
       >
-        <div>
-          {/* NAVIGATION */}
-          <div className='px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 flex flex-row gap-4 sm:gap-8 md:gap-12 lg:gap-16'>
-            <a className='p-2 bg-white rounded-md' href='#biography'>
-              Biography 🙋‍♂️
-            </a>
-            <a className='p-2 bg-white rounded-md' href='#skills'>
-              Skills 📚
-            </a>
-            <a className='p-2 bg-white rounded-md' href='#experience'>
-              Experience 🖥️
-            </a>
-            <a className='p-2 bg-white rounded-md' href='#cv'>
-              CV 📝
-            </a>
-          </div>
+        <div className='lg:w-2/3 xl:w-1/2'>
           {/* ABOUT CONTAINER */}
-          <div className='p-4 sm:p-8 md:p-12 lg:p-20 pt-8 lg:pt-12 xl:pt-24 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:1/2'>
+          <div className='p-4 sm:p-8 md:p-12 lg:p-20 pt-8 lg:pt-12 xl:pt-24 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 '>
+            {/* NAVIGATION */}
+            <div className='hidden sm:flex px-4 text-xs md:text-sm text-center  flex-row gap-4 sm:gap-8 md:gap-12 md:mb-[-3rem] lg:mb-[-7rem] xl:mb-[-10rem]'>
+              <a
+                className='p-2 min-w-[20%] md:min-w-32 bg-white rounded-md'
+                href='#biography'
+              >
+                Biography 🙋‍♂️
+              </a>
+              <a
+                className='p-2 min-w-[20%] md:min-w-32 bg-white rounded-md'
+                href='#skills'
+              >
+                Skills 📚
+              </a>
+              <a
+                className='p-2 min-w-[20%] md:min-w-32 bg-white rounded-md'
+                href='#experience'
+              >
+                Experience 🖥️
+              </a>
+              <a
+                className='p-2 min-w-[20%] md:min-w-32 bg-white rounded-md'
+                href='#cv'
+              >
+                CV 📝
+              </a>
+            </div>
             {/* BIOGRAPHY  SECTION*/}
             <section id='biography' className=''>
               <div className='flex flex-col gap-12 justify-center'>
@@ -131,11 +143,11 @@ const AboutPage = () => {
                 {/* BIOGRAPHY TEXT */}
                 <p className='text-xl'>
                   Hello! My name is Sergiy, and I&apos;m a passionate full-stack
-                  developer currently pursuing my master&apos;s degree in software
-                  engineering. With a bachelor&apos;s degree already under my belt,
-                  I&apos;ve been actively engaged in the tech industry for a year
-                  now, primarily working with React and Node.js technologies,
-                  while also diving into Next.js. <br />
+                  developer currently pursuing my master&apos;s degree in
+                  software engineering. With a bachelor&apos;s degree already
+                  under my belt, I&apos;ve been actively engaged in the tech
+                  industry for a year now, primarily working with React and
+                  Node.js technologies, while also diving into Next.js. <br />
                   Every day, I dedicate time to honing my skills in English and
                   exploring new avenues in programming. I am on the lookout for
                   an enriching environment where I can continue to grow both
@@ -204,7 +216,6 @@ const AboutPage = () => {
                 initial={{ x: '-300px' }}
                 animate={isSkillRefInView ? { x: 0 } : {}}
                 className='skills-list flex gap-4 flex-wrap'
-                
               >
                 {skills.map((skill, index) => (
                   <motion.li
