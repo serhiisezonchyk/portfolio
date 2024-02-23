@@ -1,8 +1,8 @@
 'use client';
-import Link from 'next/link';
 import NavLink from '@/components/navLink';
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { useState } from 'react';
 import { contactLinks } from '../../utils/data';
 const links = [
   { url: '/', title: 'Home' },
@@ -63,9 +63,9 @@ const Navbar = () => {
     },
   };
   return (
-    <nav className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl'>
+    <nav className="flex h-full items-center justify-between px-4 text-xl sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* LARGE NAV */}
-      <ul className='hidden md:flex gap-4 w-1/3'>
+      <ul className="hidden w-1/3 gap-4 md:flex">
         {links.map((link) => (
           <li key={link.url}>
             <NavLink link={link} />
@@ -73,73 +73,64 @@ const Navbar = () => {
         ))}
       </ul>
       {/* LOGO */}
-      <div className='md:hidden lg:flex xl:w-1/3 xl:justify-center'>
+      <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
         <Link
-          href='/'
-          className='text-sm bg-black rounded-md p-1 font-sans md:font-semibold flex items-center justify-center gap-1'
+          href="/"
+          title="Go to main page"
+          className="flex items-center justify-center gap-1 rounded-md bg-black p-1 font-sans text-sm md:font-semibold"
         >
-          <span className='text-white'>Serhii</span>
-          <span className='sm-6 md:h-8 rounded bg-white text-black flex items-center px-1'>
-            Sezonchyk
-          </span>
+          <span className="text-white">Serhii</span>
+          <span className="sm-6 flex items-center rounded bg-white px-1 text-black md:h-8">Sezonchyk</span>
         </Link>
       </div>
       {/* LINKS */}
-      <ul className='hidden md:flex gap-4 w-1/3 justify-center '>
+      <ul className="hidden w-1/3 justify-center gap-4 md:flex ">
         {contactLinks.map((link) => (
           <li key={link.url}>
             <Link
-              className='flex justify-center items-center bg-black p-2 rounded-full transition-all duration-300 ease-in hover:scale-105'
+              className="flex items-center justify-center rounded-full bg-black p-2 transition-all duration-300 ease-in hover:scale-105"
               href={link.url}
-              target='blank'
+              target="blank"
             >
-              <link.ContactIcon className='text-white' />
+              <link.ContactIcon className="text-white" />
             </Link>
           </li>
         ))}
       </ul>
       {/* RESPONSIVE MENU */}
-      <div className='md:hidden'>
+      <div className="md:hidden">
         {/* MENU_BUTTON */}
         <button
-          className='w-6 md:w-10 h-5 md:h-8 flex flex-col justify-between z-50 relative'
+          className="relative z-50 flex h-5 w-6 flex-col justify-between md:h-8 md:w-10"
           onClick={() => setOpen((prev) => !prev)}
         >
           <motion.div
             variants={topVariants}
             animate={open ? 'opened' : 'closed'}
-            className='w-6 md:w-10 h-1 bg-black rounded origin-left'
+            className="h-1 w-6 origin-left rounded bg-black md:w-10"
           ></motion.div>
           <motion.div
             variants={centerVariants}
             animate={open ? 'opened' : 'closed'}
-            className='w-6 md:w-10 h-1 bg-black rounded'
+            className="h-1 w-6 rounded bg-black md:w-10"
           ></motion.div>
           <motion.div
             variants={bottomVariants}
             animate={open ? 'opened' : 'closed'}
-            className='w-6 md:w-10 h-1 bg-black rounded origin-left'
+            className="h-1 w-6 origin-left rounded bg-black md:w-10"
           ></motion.div>
         </button>
         {/* MENU_LIST */}
         {open && (
           <motion.ul
             variants={listVariants}
-            initial='closed'
-            animate='opened'
-            className='absolute z-10 top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-10 text-4xl'
+            initial="closed"
+            animate="opened"
+            className="absolute left-0 top-0 z-10 flex h-screen w-screen flex-col items-center justify-center gap-10 bg-black text-4xl text-white"
           >
             {links.map((link) => (
-              <motion.li
-                variants={listItemVariant}
-                className='w-full flex'
-                key={link.url}
-              >
-                <NavLink
-                  link={link}
-                  isMobile={true}
-                  onClick={() => setOpen(false)}
-                />
+              <motion.li variants={listItemVariant} className="flex w-full" key={link.url}>
+                <NavLink link={link} isMobile={true} onClick={() => setOpen(false)} />
               </motion.li>
             ))}
           </motion.ul>
