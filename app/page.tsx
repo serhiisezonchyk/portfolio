@@ -9,7 +9,7 @@ export default function Home() {
       <section className="flex h-full flex-col overflow-scroll px-4 sm:px-8 md:px-12 lg:flex-row lg:px-20 xl:px-48 ">
         {/* IMAGE-CONTAINER */}
         <div className="z-0 hidden sm:relative sm:block sm:h-1/3 md:h-1/2 lg:h-full lg:w-1/2">
-          <Image src="/hero.png" alt="Man" fill className="object-contain" />
+          <Image src="/hero.png" alt="Man" fill className="object-contain drop-shadow-png" />
         </div>
         {/* TEXT-CONTAINER */}
         <div className="flex h-full flex-col items-center justify-between gap-8 py-4 sm:h-2/3 md:h-1/2 lg:h-full lg:w-1/2 ">
