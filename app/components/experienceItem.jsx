@@ -7,7 +7,7 @@ const ExperienceItem = ({ job }) => {
           <h3
             className={`rounded-b-2xl bg-white p-3 font-semibold ${
               job.isJob ? 'rounded-s-2xl' : 'rounded-e-2xl'
-            } rounded-s-2xl border-t-2 border-red-200 italic underline`}
+            } rounded-s-2xl border-t-2 border-violet-200 italic underline`}
           >
             {job.title}
           </h3>
@@ -16,7 +16,7 @@ const ExperienceItem = ({ job }) => {
         <h3
           className={`rounded-b-2xl bg-white p-3 font-semibold ${
             job.isJob ? 'rounded-s-2xl' : 'rounded-e-2xl'
-          } border-t-2 border-red-200`}
+          } border-t-2 border-violet-200`}
         >
           {job.title}
         </h3>
@@ -25,10 +25,10 @@ const ExperienceItem = ({ job }) => {
       {/*JOB DESCRIPTION*/}
       <p className="ml-2 pt-2 text-sm tracking-wide" dangerouslySetInnerHTML={{ __html: job.description }}></p>
       {/*JOB DATE*/}
-      <span className="ml-2 py-2 text-sm font-semibold italic text-red-400">{job.date}</span>
+      <span className="ml-2 py-2 text-sm font-semibold italic text-violet-400">{job.date}</span>
       {/*JOB NAME*/}
       <span
-        className={`ml-2 rounded border-b-2 border-red-200 bg-white px-4 py-2 text-sm font-semibold ${
+        className={`ml-2 rounded border-b-2 border-violet-200 bg-white px-4 py-2 text-sm font-semibold ${
           job.isJob ? 'self-start' : 'self-end text-end'
         }`}
       >

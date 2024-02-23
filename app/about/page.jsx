@@ -270,7 +270,7 @@ const AboutPage = () => {
                       {/* LINE */}
                       <div className="relative h-full w-1 rounded bg-gray-600">
                         {/* LINE CIRCLE  */}
-                        <div className="absolute -left-2 h-5 w-5 rounded-full bg-white ring-4 ring-red-400"></div>
+                        <div className="absolute -left-2 h-5 w-5 rounded-full bg-white ring-4 ring-violet-400"></div>
                       </div>
                     </div>
                     {/* RIGHT*/}

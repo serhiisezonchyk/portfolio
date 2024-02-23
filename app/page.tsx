@@ -8,15 +8,15 @@ export default function Home() {
     <motion.div className="h-full" initial={{ y: '-200vh' }} animate={{ y: '0%' }} transition={{ duration: 1 }}>
       <section className="flex h-full flex-col overflow-scroll px-4 sm:px-8 md:px-12 lg:flex-row lg:px-20 xl:px-48 ">
         {/* IMAGE-CONTAINER */}
-        <div className="z-0 hidden sm:relative sm:block sm:h-1/3 md:h-1/2 lg:h-full lg:w-1/2">
-          <Image src="/hero.png" alt="Man" fill className="object-contain drop-shadow-png" />
+        <div className="hidden sm:relative sm:block sm:h-1/3 md:h-1/2 lg:h-full lg:w-1/2">
+          <Image src="/hero.png" alt="Man" fill className="drop-shadow-png z-0 object-contain " />
         </div>
         {/* TEXT-CONTAINER */}
         <div className="flex h-full flex-col items-center justify-between gap-8 py-4 sm:h-2/3 md:h-1/2 lg:h-full lg:w-1/2 ">
           {/* LINKS CONTAINER */}
-          <div className="align-center flex h-1/3 flex-col justify-end gap-4">
+          <div className="align-center z-0 flex h-1/3 flex-col justify-end gap-4">
             {/* LINKS */}
-            <ul className="flex w-full justify-center gap-4 md:hidden ">
+            <ul className="z-1 flex w-full justify-center gap-4 md:hidden ">
               {contactLinks.map((link) => (
                 <li key={link.url}>
                   <Link
@@ -49,20 +49,13 @@ export default function Home() {
 
           {/* BUTTONS */}
           <div className="flex gap-4 lg:w-full">
-            <motion.a
-              animate={{ scale: [1, 1.4, 1, 1.6, 1] }}
-              transition={{
-                repeat: Infinity,
-                duration: 0.5,
-                repeatDelay: 3.5,
-                ease: 'easeIn',
-              }}
+            <a
               title="Go to about page"
               href="/about"
-              className="min-w-36 rounded-lg bg-black p-4 text-center text-white ring-1 ring-black transition-all duration-300 ease-in hover:bg-transparent hover:text-black"
+              className="min-w-36 animate-bounce rounded-lg bg-black p-4 text-center text-white ring-1 ring-black transition-all duration-300 ease-in hover:bg-transparent hover:text-black"
             >
               More...
-            </motion.a>
+            </a>
             <a
               href="/contact"
               title="Go to contact page"
