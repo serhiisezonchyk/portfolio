@@ -104,7 +104,7 @@ const AboutPage = () => {
     margin: '-100px',
   });
   return (
-    <motion.div className="h-full " initial={{ y: '-200vh' }} animate={{ y: '0%' }} transition={{ duration: 1 }}>
+    <motion.div className="h-full overflow-hidden" initial={{ y: '-200vh' }} animate={{ y: '0%' }} transition={{ duration: 1 }}>
       {/* NAVIGATION */}
       <div className=" fixed right-0 z-40 hidden flex-col gap-4 px-4 text-center  text-xs lg:bottom-40 lg:mb-[-7rem] lg:flex xl:bottom-48 xl:mb-[-10rem] xl:flex-row">
         <a

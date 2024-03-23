@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { contactLinks } from '../utils/data';
 export default function Home() {
   return (
-    <motion.div className="h-full" initial={{ y: '-200vh' }} animate={{ y: '0%' }} transition={{ duration: 1 }}>
-      <section className="flex h-full flex-col overflow-scroll px-4 sm:px-8 md:px-12 lg:flex-row lg:px-20 xl:px-48 ">
+    <motion.div className="h-full " initial={{ y: '-200vh' }} animate={{ y: '0%' }} transition={{ duration: 1 }}>
+      <section className="flex h-full flex-col overflow-none px-4 sm:px-8 md:px-12 lg:flex-row lg:px-20 xl:px-48 ">
         {/* IMAGE-CONTAINER */}
         <div className="hidden sm:relative sm:block sm:h-1/3 md:h-1/2 lg:h-full lg:w-1/2">
           <Image src="/hero.png" alt="Man" fill className="drop-shadow-png z-0 object-contain " />

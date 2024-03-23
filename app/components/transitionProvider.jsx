@@ -36,7 +36,7 @@ const TransitionProvider = ({ children }) => {
         <header className="h-12 py-4 md:h-16 ">
           <Navbar />
         </header>
-        <main className="h-[calc(100vh-3rem)] overflow-scroll lg:h-[calc(100vh-4rem)]">{children}</main>
+        <main className="h-[calc(100vh-3rem)]  lg:h-[calc(100vh-4rem)]">{children}</main>
       </div>
     </AnimatePresence>
   );
